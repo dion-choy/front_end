@@ -132,7 +132,7 @@ function gameLoop() {
     }
     if (player.checkWalls() || player.checkSelf()) {
         clearInterval(animation);
-        document.getElementsByClassName("overlay")[1].style.display = "block";
+        overlays[1].style.display = "block";
         document.getElementById("scoreBoard").style.display = "none";
     }
     draw(player.head);
@@ -152,24 +152,26 @@ function restart() {
     inputAllowed = true;
     buffer = null;
 
-    document.getElementsByClassName("overlay")[1].style.display = "none";
+    overlays[1].style.display = "none";
     document.getElementById("scoreBoard").style.display = "block";
     animation = setInterval(gameLoop, speed);
 }
 
 function start() {
     document.getElementById("scoreBoard").style.display = "block";
-    document.getElementsByClassName("overlay")[0].style.display = "none";
+    overlays[0].style.display = "none";
     speed = (1 - document.getElementsByTagName("input")[0].value / 100) * 200 + 50;
     restart();
 }
 
-function update() {
-    document.getElementById("selectedSpeed").innerText = document.getElementsByTagName("input")[0].value;
+function update(rangeVal) {
+    document.getElementById("selectedSpeed").innerText = rangeVal;
 }
 
 //Entry point
 const canvas = document.getElementById("board");
+const overlays = document.getElementsByClassName("overlay");
+
 const ctx = canvas.getContext("2d");
 var player = new Snake();
 var direction = "right";
@@ -178,7 +180,7 @@ var buffer = null;
 var speed;
 
 document.getElementById("scoreBoard").style.display = "none";
-document.getElementsByClassName("overlay")[0].style.display = "block";
+overlays[0].style.display = "block";
 
 document.onkeydown = function (event) {
     var inDirection = direction;
@@ -208,8 +210,10 @@ document.onkeydown = function (event) {
             }
             break;
         case "Enter":
-            if (document.getElementsByClassName("overlay")[1].style.display == "block") {
+            if (overlays[1].style.display == "block") {
                 restart();
+            } else if (overlays[0].style.display == "block") {
+                start();
             }
         default:
             return;

@@ -11,7 +11,7 @@
             <h1>Start Game</h1>
             <h3 id="selectedSpeed">50</h3>
             <p style="display: inline">1</p>
-            <input type="range" min="1" max="100" oninput="update()" />
+            <input type="range" min="1" max="100" oninput="update(this.value)" />
             <p style="display: inline">100</p>
             <br />
             <button onclick="start()">Play</button>
