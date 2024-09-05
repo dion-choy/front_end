@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(86, 86, 86);
+    display: flex;
+    justify-content: center;
+}
+
+#board {
+    height: 80vh;
+    aspect-ratio: 1;
+    background-color: black;
+    border-width: 10px;
+    border-style: solid;
+    border-color: darkgray;
+}
+
+h2 {
+    display: inline;
+}
+
+#scoreBoard {
+    background-color: lightgray;
+}
+
+.overlay {
+    background-color: rgba(193, 193, 193, 0.545);
+    fill-opacity: 0.5;
+
+    position: fixed;
+    height: 80vh;
+    z-index: 2;
+    aspect-ratio: 1;
+    transform: translateY(10px);
+
+    display: none;
+    text-align: center;
+}
+
+button {
+    background-color: lightgreen;
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    border-width: 0;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: rgb(127, 215, 127);
+}
+
+button:focus {
+    background-color: rgb(113, 183, 113);
+}
