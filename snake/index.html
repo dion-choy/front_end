@@ -7,7 +7,7 @@
     </head>
 
     <body>
-        <div class="overlay">
+        <section class="overlay">
             <h1>Start Game</h1>
             <h3 id="selectedSpeed">50</h3>
             <p style="display: inline">1</p>
@@ -15,24 +15,24 @@
             <p style="display: inline">100</p>
             <br />
             <button onclick="start()">Play</button>
-        </div>
-        <div class="overlay">
+        </section>
+        <section class="overlay">
             <h1>You Lost!</h1>
             <h2>Score:</h2>
             <h2 class="score">0</h2>
             <br />
             <button id="restart" onclick="restart()">Restart?</button>
-        </div>
+        </section>
 
-        <div>
-            <div>
+        <main>
+            <article>
                 <canvas id="board" width="250px" height="250px">test</canvas>
-            </div>
-            <div id="scoreBoard">
+            </article>
+            <aside id="scoreBoard">
                 <h2>Score:</h2>
                 <h2 class="score">0</h2>
-            </div>
-        </div>
+            </aside>
+        </main>
         <script src="script.js"></script>
     </body>
 </html>
