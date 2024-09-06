@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+.done {
+    text-decoration: line-through;
+}
+.undone {
+    text-decoration: none;
+}
+
+li input {
+    margin-right: 10px;
+}
+
+.removeTask {
+    background-color: transparent;
+    border: 0;
+    text-align: right;
+    color: darkgray;
+}
+.removeTask:hover {
+    color: gray;
+}
