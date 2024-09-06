@@ -11,13 +11,13 @@ function addToList(event) {
         } else if (newItem.classList[0] == "done") {
             newItem.className = "undone";
         }
-        localStorage.setItem(newItem.selfNum, [newItem.classList[0], newToDo]);
+        localStorage.setItem(newItem.dataset.index, [newItem.classList[0], newToDo]);
     });
 
     newItem.append(checkBox);
     newItem.append(newToDo);
     newItem.className = "undone";
-    newItem.selfNum = ++taskNum;
+    newItem.dataset.index = ++taskNum;
 
     toDo.appendChild(newItem);
 
@@ -53,12 +53,12 @@ window.onload = function () {
                 } else if (newItem.classList[0] == "done") {
                     newItem.className = "undone";
                 }
-                localStorage.setItem(newItem.selfNum, [newItem.classList[0], newToDo]);
+                localStorage.setItem(newItem.dataset.index, [newItem.classList[0], newToDo]);
             });
 
             newItem.append(checkBox);
             newItem.append(newToDo);
-            newItem.selfNum = i;
+            newItem.dataset.index = i;
 
             toDo.appendChild(newItem);
         }
