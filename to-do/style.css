@@ -1,16 +1,70 @@
+form {
+    max-width: fit-content;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+input {
+    font-size: 30px;
+    height: 40px;
+    margin: 0px;
+    line-height: 0px;
+}
+
+input[type="text"] {
+    padding: 3.5px;
+    height: 30px;
+}
+
 ul {
     list-style-type: none;
-    padding-left: 10px;
+
+    font-size: 30px;
+
+    max-width: fit-content;
+    margin: auto;
 }
+
 .done {
     text-decoration: line-through;
 }
+
 .undone {
     text-decoration: none;
 }
 
-li input {
-    margin-right: 10px;
+li {
+    width: 60vw;
+    height: auto;
+}
+
+li p {
+    display: inline-block;
+    overflow-wrap: break-word;
+    vertical-align: text-top;
+
+    margin-top: 0px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+
+li input[type="checkbox"] {
+    position: relative;
+    right: 35px;
+    margin-right: -25px;
+    height: 20px;
+    aspect-ratio: 1;
+}
+
+li button {
+    font-size: inherit;
+    height: 30px;
+    float: right;
+}
+
+li hr {
+    margin-top: -10px;
+    border-color: lightgray;
 }
 
 .removeTask {
@@ -19,6 +73,7 @@ li input {
     text-align: right;
     color: darkgray;
 }
+
 .removeTask:hover {
     color: gray;
 }
