@@ -20,3 +20,4 @@
 -   Practice DOM API
 -   Changes classes to strikethrough completed tasks
 -   Remove button for tasks
+-   Uses local storage for information persistence
