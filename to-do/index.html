@@ -6,13 +6,13 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <form onsubmit="addToList(event)">
-            <input type="text" placeholder="Enter a task" id="task" required="true" />
-            <input type="submit" value="Add" />
-        </form>
         <main>
             <ul id="toDo"></ul>
         </main>
+        <form onsubmit="addToList(event)">
+            <p id="curDir">~$</p>
+            <input type="text" placeholder="Enter a task" id="taskBar" required="true" />
+        </form>
         <script src="script.js"></script>
     </body>
 </html>

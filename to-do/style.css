@@ -1,19 +1,50 @@
+* {
+    font-family: "Courier New", Courier, monospace;
+}
+
+body {
+    background-color: black;
+    color: greenyellow;
+}
+
 form {
-    max-width: fit-content;
-    margin: auto;
-    margin-bottom: 20px;
-}
-
-input {
     font-size: 30px;
-    height: 40px;
+    max-width: fit-content;
     margin: 0px;
-    line-height: 0px;
+
+    background: black;
+
+    position: fixed;
+    z-index: 1;
+    left: 10px;
+    bottom: 0px;
 }
 
-input[type="text"] {
+form p {
+    display: inline-block;
+    margin: 0px;
+    width: fit-content;
+}
+
+form input[type="text"] {
+    position: relative;
+    bottom: 2px;
+
+    font-size: 30px;
+
     padding: 3.5px;
     height: 30px;
+    float: right;
+    margin-left: 10px;
+
+    color: greenyellow;
+
+    background-color: black;
+    border-width: 0;
+}
+
+form input[type="text"]:focus {
+    outline: none;
 }
 
 ul {
@@ -21,8 +52,12 @@ ul {
 
     font-size: 30px;
 
+    /*
     max-width: fit-content;
-    margin: auto;
+    //margin: auto;
+    */
+    margin-left: 1vw;
+    margin-bottom: 50px;
 }
 
 .done {
@@ -34,7 +69,7 @@ ul {
 }
 
 li {
-    width: 60vw;
+    width: 90vw;
     height: auto;
 }
 
@@ -54,6 +89,10 @@ li input[type="checkbox"] {
     margin-right: -25px;
     height: 20px;
     aspect-ratio: 1;
+}
+
+li input[type="checkbox"]:checked {
+    accent-color: green;
 }
 
 li button {

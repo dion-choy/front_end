@@ -6,7 +6,7 @@ function addToList(event) {
     const removeButton = document.createElement("button");
     const lineBreak = document.createElement("hr");
 
-    newTask.innerText = document.getElementById("task").value.trim();
+    newTask.innerText = document.getElementById("taskBar").value.trim();
 
     addButtonFunc(checkBox, newItem, newTask, removeButton);
     newItem.appendChild(lineBreak);
@@ -16,7 +16,7 @@ function addToList(event) {
 
     toDo.appendChild(newItem);
 
-    document.getElementById("task").value = "";
+    document.getElementById("taskBar").value = "";
 
     localStorage.setItem(taskNum, [newTask.className, newTask.innerText]);
     localStorage.setItem("size", taskNum);
@@ -53,6 +53,8 @@ function clearTask() {
 }
 
 window.onload = function () {
+    resizeTaskBar();
+
     if (localStorage.size) {
         taskNum = localStorage.size;
         for (let i = 1; i <= taskNum; i++) {
@@ -80,4 +82,11 @@ window.onload = function () {
 };
 
 const toDo = document.getElementById("toDo");
+const taskBar = document.getElementById("taskBar");
+const curDir = document.getElementById("curDir");
 var taskNum = 0;
+
+window.onresize = resizeTaskBar;
+function resizeTaskBar() {
+    taskBar.style.width = window.innerWidth - curDir.clientWidth - 50 + "px";
+}
