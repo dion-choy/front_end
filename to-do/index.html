@@ -9,9 +9,17 @@
         <main>
             <ul id="toDo"></ul>
         </main>
-        <form onsubmit="addToList(event)">
+        <section id="helpOverlay">
+            <p>Enter '<strong>help</strong>' to start</p>
+        </section>
+        <form onsubmit="detectCommand(event)">
             <p id="curDir">~$</p>
-            <input type="text" placeholder="Enter a task" id="taskBar" required="true" />
+            <input
+                type="text"
+                placeholder="Enter a task"
+                id="taskBar"
+                onkeydown="{helpOverlay.style.display = 'none'}"
+            />
         </form>
         <script src="script.js"></script>
     </body>

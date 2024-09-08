@@ -7,6 +7,20 @@ body {
     color: greenyellow;
 }
 
+section {
+    font-size: 30px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+
+    width: 100vw;
+    background-color: black;
+}
+
+section p {
+    margin-top: 5px;
+}
+
 form {
     font-size: 30px;
     max-width: fit-content;
@@ -96,6 +110,7 @@ li input[type="checkbox"]:checked {
 }
 
 li button {
+    display: none;
     font-size: inherit;
     height: 30px;
     float: right;
