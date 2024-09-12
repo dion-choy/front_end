@@ -190,7 +190,7 @@ window.onload = function () {
 
 window.onresize = resizeTaskBar;
 function resizeTaskBar() {
-    taskBar.style.width = window.innerWidth - curDir.clientWidth - 50 + "px";
+    taskBar.style.width = window.innerWidth - curDir.clientWidth - 30 + "px";
 }
 
 const toDo = document.getElementById("toDo");
