@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>To Do List</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <button id="goLogin" onclick="revealLogin()">Login</button>
+            <form id="form" class="login" onsubmit="submitForm(event)">
+                <p>Name:</p>
+                <input type="text" id="name" placeholder="Enter your name" required="true" />
+                <p class="hideLogin">Email:</p>
+                <input type="text" class="hideLogin" id="email" placeholder="Enter your email" />
+                <p>Password:</p>
+                <input type="text" id="password" placeholder="Enter your password" required="true" />
+                <button id="submit">Log in</button>
+            </form>
+            <button id="goRegister" onclick="revealRegister()">Register</button>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
