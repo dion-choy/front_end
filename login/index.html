@@ -11,10 +11,17 @@
             <form id="form" class="login" onsubmit="submitForm(event)">
                 <p>Name:</p>
                 <input type="text" id="name" placeholder="Enter your name" required="true" />
-                <p class="hideLogin">Email:</p>
-                <input type="text" class="hideLogin" id="email" placeholder="Enter your email" />
                 <p>Password:</p>
-                <input type="text" id="password" placeholder="Enter your password" required="true" />
+                <input type="password" id="password" placeholder="Enter your password" required="true" />
+                <p class="hideLogin">Confirm Password:</p>
+                <input
+                    class="hideLogin"
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm your password"
+                    required="true"
+                    value="null"
+                />
                 <button id="submit">Log in</button>
             </form>
             <button id="goRegister" onclick="revealRegister()">Register</button>

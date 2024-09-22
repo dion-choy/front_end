@@ -3,28 +3,55 @@
         "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+@keyframes toReg {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+        margin-left: 100%;
+        background-color: cyan;
+    }
+}
+
+@keyframes toLogin {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        transform: translateX(0%);
+        margin-left: 0px;
+        background-color: red;
+    }
+}
+
 body {
     background: rgb(102, 102, 102);
 }
 
 main {
-    margin: auto;
     max-height: fit-content;
+    min-width: max-content;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
 
     border-radius: 10px;
     border: solid 1px black;
 
-    height: 50vh;
-    width: 70vh;
+    height: 300px;
+    width: 400px;
 
-    position: relative;
+    position: absolute;
     background: cyan;
 
     font-weight: 500;
 
     background: linear-gradient(to right, cyan 50%, red 50%);
     background-size: 200%;
-    transition: 0.25s ease-out;
+    transition: 0.4s ease-out;
 }
 
 main form {
@@ -51,6 +78,7 @@ form button {
 
     background-color: red;
     margin-top: 15px;
+    margin-bottom: 50px;
 
     border-width: 0.5px;
     border-radius: 4px;

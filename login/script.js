@@ -8,12 +8,17 @@ function revealLogin() {
 
     document.getElementsByTagName("main")[0].style.backgroundPosition = "left";
 
+    document.getElementById("confirmPassword").value = "null";
+
     form.className = "login";
 
-    submitBtn.innerText = "Log in";
-    submitBtn.style.marginLeft = "0px";
-    submitBtn.style.transform = "none";
-    submitBtn.style.backgroundColor = "red";
+    submitBtn.style.animation = "toLogin 0.4s";
+    setTimeout(() => {
+        submitBtn.innerText = "Log in";
+        submitBtn.style.marginLeft = "0px";
+        submitBtn.style.transform = "none";
+        submitBtn.style.backgroundColor = "red";
+    }, 350);
 }
 
 function revealRegister() {
@@ -26,12 +31,17 @@ function revealRegister() {
 
     document.getElementsByTagName("main")[0].style.backgroundPosition = "right";
 
+    document.getElementById("confirmPassword").value = "";
+
     form.className = "register";
 
-    submitBtn.innerText = "Sign up";
-    submitBtn.style.marginLeft = "100%";
-    submitBtn.style.transform = "translate(-100%)";
-    submitBtn.style.backgroundColor = "cyan";
+    submitBtn.style.animation = "toReg 0.4s";
+    setTimeout(() => {
+        submitBtn.innerText = "Sign up";
+        submitBtn.style.marginLeft = "100%";
+        submitBtn.style.transform = "translate(-100%)";
+        submitBtn.style.backgroundColor = "cyan";
+    }, 350);
 }
 
 function submitForm(event) {
@@ -46,6 +56,9 @@ function submitForm(event) {
     }
 
     form.reset();
+    if (form.className == "register") {
+        document.getElementById("confirmPassword").value = "";
+    }
 }
 
 const submitBtn = document.getElementById("submit");
