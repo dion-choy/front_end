@@ -4,17 +4,18 @@
 
 -   [Snake](#snake)
 -   [To Do](#to-do-list)
+-   [Demo Login](#demo-login)
 
 ## Brief Overview
 
-#### [Snake](/snake)
+#### [Snake](./snake)
 
 -   Use of html canvas
 -   Practice data structure of doubly linked list
 -   Use of range input to change snake speed
 -   Use of setInterval to run animation
 
-#### [To Do List](/to-do)
+#### [To Do List](./to-do)
 
 -   Text & checkbox input
 -   Practice DOM API
@@ -22,7 +23,7 @@
 -   Remove button for tasks
 -   Uses local storage for information persistence
 
-#### [Demo Login](/login)
+#### [Demo Login](./login)
 
 -   Form input
 -   Practice DOM API
