@@ -32,7 +32,6 @@ body {
 }
 
 main {
-    max-height: fit-content;
     min-width: max-content;
     top: 10%;
     left: 50%;
